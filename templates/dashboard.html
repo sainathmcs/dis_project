@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en" xml:lang="en">
+  <head>
+    <title>Smart Homes - Welcome to your space</title>
+    <meta content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/index.css') }}"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="./styles/index.css" /> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/dashboard.css') }}"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="./styles/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/slider.css" /> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/slider.css') }}"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="./js/graphs/electricity.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="http://localhost:5000/">
+          <h1 class="logo-label">Smart Homes</h1>
+        </a>
+        <ul>
+          <li><a href="http://localhost:5000/">Home</a></li>
+          <li><a href="http://localhost:5000/about">About</a></li>
+        </ul>
+      </nav>
+      <a href="http://localhost:5000/login" class="login-button">
+        <p class="custom-button">Login</p>
+      </a>
+    </header>
+
+    <!-- Main content that should be edited -->
+    <main>
+      <div class="container">
+        <div class="heading-main">
+          <input type="hidden" value="{{email}}" id="rentid" />
+          <input type="hidden" value="{{password}}" id="password" />
+          <p class="heading">Your Devices</p>
+          <a href="http://localhost:5000/add-home" class="link">
+            <p class="add-home">Manage Homes</p></a
+          >
+        </div>
+        <div class="card-container">
+          <!-- device card -->
+          <div class="device-card">
+            <div class="device-details">
+              <div class="font-bold">Dining Lights</div>
+              <div class="toggle">
+                <label class="switch">
+                  <input class="slider-input" type="checkbox" name="dining_lights" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <img
+              src="../static/assets/bulb.jpeg"
+              class="device-image"
+              alt="device"
+            />
+          </div>
+          <!-- device card ends -->
+
+          <!-- device card -->
+          <div class="device-card">
+            <div class="device-details">
+              <div class="font-bold">Main Room Thermostat</div>
+              <div class="toggle">
+                <label class="switch">
+                  <input
+                    class="slider-input"
+                    type="checkbox"
+                    name="thermostat"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <img
+              src="../static/assets/thermostat.jpeg"
+              class="device-image"
+              alt="device"
+            />
+          </div>
+          <!-- device card ends -->
+
+         
+
+          <!-- device card -->
+          <div class="device-card">
+            <div class="device-details">
+              <div class="font-bold">Front Door Lock</div>
+              <div class="toggle">
+                <label class="switch">
+                  <input class="slider-input" type="checkbox" name="lock" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <img
+              src="../static/assets/camera.jpeg"
+              class="device-image"
+              alt="device"
+            />
+          </div>
+          <!-- device card ends -->
+
+          <!-- device card -->
+          <div class="device-card">
+            <div class="device-details">
+              <div class="font-bold">kitchen-lights </div>
+              <div class="toggle">
+                <label class="switch">
+                  <input class="slider-input" type="checkbox" name="kitchen_lights" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <img
+              src="../static/assets/bulb.jpeg"
+              class="device-image"
+              alt="device"
+            />
+          </div>
+          <!-- device card ends -->
+        </div>
+      </div>
+    </main>
+    <canvas
+      id="electricityChart"
+      style="width: 100%; max-width: 700px"
+    ></canvas>
+
+    <footer>
+      <p>&copy; 2023 Smart Homes</p>
+    </footer>
+  </body>
+</html>
+
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-1.7.1.min.js"
+></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".slider-input").change(function () {
+      debugger;
+      console.log($(this).attr("name"));
+      console.log($(this).val());
+      $.ajax({
+        url: "/updateDeviceStatus",
+        type: "POST",
+        data: JSON.stringify({
+          name: $(this).attr("name"),
+          status: $(this).val(),
+          rentid: $("#rentid").val(),
+          password: $("#password").val(),
+        }),
+        contentType: "application/json",
+        dataType: "json",
+        success: function (response) {
+          debugger;
+          console.log("Success:", response);
+          if (response == "pass") {
+            $("#error-message").show();
+          } else {
+            $("#form-date").submit();
+            return true;
+          }
+        },
+        error: function (error) {
+          console.log("Error:", error);
+        },
+      });
+    });
+  });
+</script>

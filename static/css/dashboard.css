@@ -1,0 +1,151 @@
+.container {
+    max-width: 2300px;
+    padding: 1vw;
+  }
+  
+  .heading {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+  
+  .device-card {
+    height: 300px;
+    padding: 10px;
+    border-width: 1px;
+    border-radius: 4%;
+    border-style: solid;
+    border-color: grey;
+    box-shadow: inset;
+    text-align: center;
+  }
+  
+  .device-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .device-image {
+    height: 80%;
+  }
+  
+  .heading-main {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .add-home {
+    background-color: var(--primary);
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 10px;
+    color: white;
+    text-decoration: none !important;
+  }
+  
+  .input-container {
+    width: inherit;
+    max-width: 60vw;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  .input-box {
+    width: 100%;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 1vh;
+  }
+  
+  .input-box-label {
+    text-align: left;
+  }
+  
+  .login-submit {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .default-button {
+    text-align: center;
+  }
+  .margin-top-3 {
+    margin-top: 3vh;
+  }
+  
+  .bottom-spacing {
+    margin-top: 20vh;
+  }
+  
+  /* Homes list */
+  .home-list-container {
+    max-width: 60vw;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  .home-container {
+    border: 1px solid #ccc !important;
+    margin: auto;
+  }
+  
+  .delete-icon {
+    margin: auto;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .home-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .home-image {
+    width: 100%;
+    margin-top: 2vh;
+  }
+  
+  .home-height {
+    height: auto;
+  }
+  
+  .team-learnings {
+    font-size: small;
+    text-align: justify;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .input-container {
+      max-width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .login-img {
+      width: 100%;
+      margin-top: 10vh;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+    }
+  
+    .heading {
+      font-size: 26px;
+      font-weight: bold;
+      margin-right: auto;
+    }
+    .link {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+  

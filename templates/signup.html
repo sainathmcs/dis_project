@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <title>Smart Homes - Welcome to your space</title>
+    <meta content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/index.css') }}"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles/index.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/login.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/login.css') }}"
+    />
+    <script src="./js/validations/login.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="http://localhost:5000/">
+          <h1 class="logo-label">Smart Homes</h1>
+        </a>
+        <ul>
+          <li><a href="http://localhost:5000/">Home</a></li>
+          <li><a href="http://localhost:5000/about">About</a></li>
+        </ul>
+      </nav>
+      <a href="http://localhost:5000/login" class="login-button">
+        <p class="custom-button">Login</p>
+      </a>
+    </header>
+
+    <!-- Main content that should be edited -->
+    <main>
+      <div class="banner-container banner-container-padding">
+        <form action="/Signup" method="POST" enctype="multipart/form-data">
+          <p class="">Signup</p>
+          <div class="input-container complete-center margin-top-3">
+            <div class="input-box-label">
+              <label class="input-box-label" for="email"> Email </label>
+            </div>
+            <input name="usermail" required class="input-box" />
+          </div>
+
+          <div class="input-container complete-center margin-top-3">
+            <div class="input-box-label">
+              <label class="input-box-label" for="password"> Password </label>
+            </div>
+            <input
+              name="pswd"
+              minlength="8"
+              maxlength="32"
+              required
+              type="password"
+              class="input-box"
+            />
+          </div>
+
+          <div class="input-container complete-center margin-top-3">
+            <div class="input-box-label">
+              <label class="input-box-label" for="confirm-password"
+                >Confirm Password
+              </label>
+            </div>
+            <input
+              name="confirm-pswd"
+              minlength="8"
+              maxlength="32"
+              required
+              type="password"
+              class="input-box"
+            />
+          </div>
+
+          <button
+            type="submit"
+            href="/dashboard.html"
+            class="input-container w-full complete-center margin-top-3"
+          >
+            <div class="default-button" id="login-submit">Signup</div>
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Smart Homes</p>
+    </footer>
+  </body>
+</html>

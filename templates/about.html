@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en" xml:lang="en">
+  <head>
+    <title>Smart Homes - Welcome to your space</title>
+    <meta content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <!-- <link rel="stylesheet" type="text/css" href="./styles/index.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/slider.css" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/slider.css') }}">
+  
+
+    <style>
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+        <header>
+            <nav>
+              <a href="http://localhost:5000/"> <h1 class="logo-label">Smart Homes</h1> </a>
+              <ul>
+                <li><a href="http://localhost:5000/">Home</a></li>
+                <li><a href="http://localhost:5000/about">About</a></li>
+              </ul>
+            </nav>
+            <a href="http://localhost:5000/login" class="login-button">
+              <p class="custom-button">Login</p>
+            </a>
+          </header>
+
+      <!-- Main content that should be edited -->
+      <main>
+        <div class="container">
+          <div class="login-container add-home-container">
+            <!-- Remove section -->
+
+            <div class="home-list-container">
+              <p class="banner-text">Our Team</p>
+
+              <div class="card-container">
+                <!-- team card -->
+                <div class="device-card home-height">
+                  <img
+                    src="../static/assets/profile_pic.jpg"
+                    class="team-image"
+                    alt="home"
+                  />
+
+                  <div class="team-details">
+                    <div class="font-bold">Sai Nath Vanacharla</div>
+                  </div>
+
+                  <div class="team-learnings">
+                    <p>
+                      Worked on login page creation using css and java script.I have created a login page that fits the smart home style using CSS that is both aesthetically appealing and user-friendly. The login page for the smart home website can be made more secure and functional by using JavaScript to provide interactive features like form validation and password encryption.
+                    </p>
+                  </div>
+                </div>
+                <!-- team card ends -->
+
+                <!-- team card -->
+                <div class="device-card home-height">
+                  <img src="../static/assets/ravali.jpg" class="team-image" alt="home" />
+
+                  <div class="team-details">
+                    <div class="font-bold">Ravali Venkatayogi</div>
+                  </div>
+
+                  <div class="team-learnings">
+                    <p>
+                      I have worked on home page styling.For Layout the home page I used HTML to include a header, navigation menu, main content section, and footer, and I added interactive features to the page using JavaScript. I used CSS to style the page and create a responsive design.
+                    </p>
+                  </div>
+                </div>
+                <!-- team card ends -->
+
+                <!-- team card -->
+                <div class="device-card home-height">
+                  <img src="../static/assets/pooja.jpg" class="team-image" alt="home" />
+
+                  <div class="team-details">
+                    <div class="font-bold">Naga Poojitha Taduri</div>
+                  </div>
+
+                  <div class="team-learnings">
+                    <p>
+                      I have worked on login page styling and charts for our data.I used CSS styling and charts to create a user interface that was both visually appealing and informative for my assignment on smart home technology.I Made a layout that is both aesthetically appealing and simple to navigate using HTML and CSS.
+                    </p>
+                  </div>
+                </div>
+                <!-- team card ends -->
+
+                <!-- team card -->
+                <div class="device-card home-height">
+                  <img src="../static/assets/shanti.jpg" class="team-image" alt="home" />
+
+                  <div class="team-details">
+                    <div class="font-bold">Santhi Madhurya Prathi</div>
+                  </div>
+
+                  <div class="team-learnings">
+                    <p>
+                      I have worked on dashboard creation and styling.I created a dashboard page layout using HTML that features a variety of widgets and panels to show data about the smart home, and I created a visually appealing and simple-to-use interface for the smart home application by using CSS to layout the page.
+                    </p>
+                  </div>
+                </div>
+                <!-- team card ends -->
+
+              </div>
+            </div>
+
+            <!-- margin bottom -->
+            <div class="bottom-spacing"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="footer">
+      <p>Smart Homes</p>
+    </div>
+  </body>
+</html>

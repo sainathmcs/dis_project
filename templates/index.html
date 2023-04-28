@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en" xml:lang="en">
+  <head>
+    <title>Smart Homes - Welcome to your space</title>
+    <meta content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <!-- <link rel="stylesheet" type="text/css" href="./styles/index.css" /> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/index.css') }}"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="http://localhost:5000/">
+          <h1 class="logo-label">Smart Homes</h1>
+        </a>
+        <ul>
+          <li><a href="http://localhost:5000/">Home</a></li>
+          <li><a href="http://localhost:5000/about">About</a></li>
+        </ul>
+      </nav>
+      <a href="http://localhost:5000/login" class="login-button">
+        <p class="custom-button">Login</p>
+      </a>
+    </header>
+
+    <!-- Main content that should be edited -->
+    <main>
+      <div class="banner-container">
+        <img
+          src="../static/assets/banner.jpg"
+          class="banner-img"
+          alt="banner"
+        />
+        <p class="banner-text">
+          Take Control of Your Home with Our Smart Home Solutions
+        </p>
+      </div>
+
+      <div class="banner-container margin-top">
+        <div class="banner-text">
+          <div>
+            Streamline Your Daily Routine with Our Smart Home Management
+            Services
+          </div>
+          <p class="banner-description">
+            Welcome to our smart home control site! Are you tired of managing
+            multiple smart home accounts for your rental properties? Look no
+            further! Our site allows you to control all your smart home
+            appliances across multiple smart rent accounts with just one
+            account. Simply add your accounts to our site and enjoy seamless
+            control of your smart thermostats, lights, locks, and more. Say
+            goodbye to the hassle of juggling multiple apps and passwords. With
+            our site, you have the convenience of controlling your entire smart
+            home ecosystem at your fingertips. Join us today and simplify your
+            smart home management!
+          </p>
+        </div>
+        <img
+          src="../static/assets/banner-2.jpg"
+          class="banner-img-2"
+          alt="banner"
+        />
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Smart Homes</p>
+    </footer>
+  </body>
+</html>
